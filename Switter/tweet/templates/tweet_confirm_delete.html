@@ -1,0 +1,13 @@
+{% extends "layout.html" %} {% block title %} Sweet tweet {% endblock %} 
+{%block content %}
+<h1 class='text-center text-white mt-5'>Welcome to Switter </h1>
+
+<h3 class="text-center mt-4">Are you sure that you want to delete the tweet ?</h3>
+<form method="post" class='text-center' >
+{% csrf_token %}
+<button class="btn btn-danger">Delete</button>
+<a class="btn btn-success" href="{% url 'tweet_list' %}
+">Cancel</a>
+</form>
+
+{% endblock %}

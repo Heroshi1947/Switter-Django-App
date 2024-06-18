@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+<form method="post" class="d-flex mt-4 flex-column justify-content-between align-items-center" >
+<h2 class='mb-3' >Registration form</h2>
+{% csrf_token %}
+{{form.as_p}}
+<button class="btn btn-primary px-5 mb-3">Register</button>
+
+<p>Already have an account? 
+</p>
+    <a class="btn btn-warning" href="{% url 'login' %}
+    ">Login here</a>
+</form>
+{% endblock %}
